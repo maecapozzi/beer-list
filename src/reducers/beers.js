@@ -1,4 +1,5 @@
 import { ADD_BEER } from '../actions'
+import { HIDE_BEER } from '../actions'
 
 const beer = (state = {}, action) => {
   switch (action.type) {
@@ -19,6 +20,10 @@ const beers = (state = [], action) => {
         ...state,
         beer(undefined, action)
       ]
+    case HIDE_BEER:
+      return {
+        ...state,
+      }
     default:
       return state
   }
